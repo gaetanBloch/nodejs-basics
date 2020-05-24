@@ -1,4 +1,5 @@
 const http = require('http');
+const fs = require('fs');
 
 const server = http.createServer((req, res) => {
   switch (req.url) {
@@ -13,6 +14,7 @@ const server = http.createServer((req, res) => {
       return res.end();
     case '/message':
       if (req.method === 'POST') {
+        fs.writeFileSync('message.txt', 'Dummy');
         res.writeHead(302, { Location: '/' });
         return res.end();
       }
