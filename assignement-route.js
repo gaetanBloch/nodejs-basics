@@ -27,11 +27,30 @@ const requestHandler = (req, res) => {
     return res.end();
   };
 
+  const logUserHandler = () => {
+    if (req.method === 'POST') {
+      const body = [];
+      req.on('data', chunk => {
+        body.push(chunk);
+      });
+      req.on('end', () => {
+        const parsedBody = Buffer.concat(body).toString();
+        const username = parsedBody.split('=')[1];
+        console.log(username);
+      });
+      return res.end();
+    } else {
+      return rootHandler();
+    }
+  };
+
   switch (req.url) {
     case '/':
       return rootHandler();
     case '/users':
       return usersHandler();
+    case '/create-user':
+      return logUserHandler();
     default:
       return rootHandler();
   }
