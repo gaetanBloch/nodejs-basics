@@ -1,4 +1,4 @@
-// 1. Spin up A Node.js Server on port 3000
+// 1. Spin up a Node.js Server on port 3000
 // 2. Handle 2 routes: "/" and "users"
 //// a. Return some greeting on "/"
 //// b. Return a list of dummy users on "/users"
@@ -7,3 +7,11 @@
 // 4. Add the "/create-user" route and parse the incoming data i.e. the
 // username and log it to the console
 // 5. Redirect to "/" after logging
+
+const http = require('http');
+
+const requestHandler = require('./assignment-route')
+
+const server = http.createServer(requestHandler);
+
+server.listen(3000);
