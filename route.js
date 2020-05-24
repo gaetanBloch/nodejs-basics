@@ -28,7 +28,7 @@ const requestHandler = (req, res) => {
     res.write('<html>');
     res.write('<head><title>My First Page</title></head>');
     res.write('<body><h1>Hello from my Node.js Server!</h1></body>');
-    res.write('<html>');
+    res.write('</html>');
     res.end();
   }
 }
@@ -38,6 +38,9 @@ const requestHandler = (req, res) => {
 //   someText: 'Some hard coded text'
 // };
 
-module.exports.handler = requestHandler;
-module.exports.someText = 'Some hard coded text';
+// module.exports.handler = requestHandler;
+// module.exports.someText = 'Some hard coded text';
+
+exports.handler = requestHandler;
+exports.someText = 'Some hard coded text';
 
