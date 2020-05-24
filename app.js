@@ -11,6 +11,11 @@ const server = http.createServer((req, res) => {
         '</form></body>');
       res.write('<html>');
       return res.end();
+    case '/message':
+      if (req.method === 'POST') {
+        res.writeHead(302, { Location: '/' });
+        return res.end();
+      }
   }
   res.setHeader('Content-Type', 'text/html');
   res.write('<html>');
