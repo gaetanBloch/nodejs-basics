@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
       res.write('<html>');
       res.write('<head><title>Enter Message</title></head>');
       res.write('<body><form action="/message" method="post">' +
-        '<input type="text" name="message"><br/>' +
+        '<input type="text" name="message"><br/><br/>' +
         '<button type="submit">Send</button>' +
         '</form></body>');
       res.write('<html>');
