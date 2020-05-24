@@ -33,5 +33,5 @@ const requestHandler = (req, res) => {
   }
 }
 
-export default requestHandler;
+module.exports = requestHandler;
 
