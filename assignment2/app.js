@@ -14,4 +14,10 @@ app.get('/', (req, res, next) => {
   );
 });
 
+app.get('/users', (req, res, next) => {
+  res.sendFile(
+    path.join(__dirname, '..', 'assignment2', 'views', 'users.html')
+  );
+});
+
 app.listen(3000);
