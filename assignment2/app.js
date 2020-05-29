@@ -7,15 +7,11 @@ const express = require('express');
 const path = require('path');
 
 const indexRoute = require('./routes/index');
+const usersRoute = require('./routes/users');
 
 const app = express();
 
 app.use(indexRoute);
-
-app.get('/users', (req, res, next) => {
-  res.sendFile(
-    path.join(__dirname, '..', 'assignment2', 'views', 'users.html')
-  );
-});
+app.use(usersRoute);
 
 app.listen(3000);
