@@ -6,13 +6,11 @@
 const express = require('express');
 const path = require('path');
 
+const indexRoute = require('./routes/index');
+
 const app = express();
 
-app.get('/', (req, res, next) => {
-  res.sendFile(
-    path.join(__dirname, '..', 'assignment2', 'views', 'index.html')
-  );
-});
+app.use(indexRoute);
 
 app.get('/users', (req, res, next) => {
   res.sendFile(
