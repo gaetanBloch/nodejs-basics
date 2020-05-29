@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "assignment": "nodemon assignment1/app.js",
+    "assignment1": "nodemon assignment1/app.js",
+    "assignment2": "nodemon assignment2/app.js",
     "debug": "nodemon --inspect app.js"
   },
   "repository": {
