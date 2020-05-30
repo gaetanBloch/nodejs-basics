@@ -8,6 +8,7 @@
     "start": "nodemon app.js",
     "assignment1": "nodemon assignment1/app.js",
     "assignment2": "nodemon assignment2/app.js",
+    "assignment3": "nodemon assignment3/app.js",
     "debug": "nodemon --inspect app.js"
   },
   "repository": {
