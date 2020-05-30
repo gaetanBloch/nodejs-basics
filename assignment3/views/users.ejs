@@ -8,11 +8,15 @@
 </head>
 
 <body>
+  <% if(users.length > 0) { %>
   <ul>
     <% for (const user of users) { %>
     <li><%= user %></li>
     <% } %>
   </ul>
+  <% } else { %>
+  <h3>No Users to display...</h3>
+  <% } %>
 </body>
 
 </html>
