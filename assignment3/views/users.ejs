@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>users</title>
+  <title><%= title %></title>
 </head>
 
 <body>
   <ul>
-    <li>user1</li>
-    <li>user2</li>
-    <li>user3</li>
+    <% for (const user of users) { %>
+    <li><%= user %></li>
+    <% } %>
   </ul>
 </body>
 
