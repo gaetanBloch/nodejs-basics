@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('includes/head.ejs') %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
-  <title><%= title %></title>
-</head>
+<form method="POST" action="/users">
+  <input type="text" name="user" placeholder="user name">
+  <button type="submit">Add user</button>
+</form>
 
-<body>
-  <form method="POST" action="/users">
-    <input type="text" name="user" placeholder="user name">
-    <button type="submit">Add user</button>
-  </form>
-</body>
-
-</html>
+<%- include('includes/end.ejs') %>

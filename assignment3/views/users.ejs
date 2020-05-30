@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('includes/head.ejs') %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-</head>
-
-<body>
-  <% if(users.length > 0) { %>
-  <ul>
-    <% for (const user of users) { %>
-    <li><%= user %></li>
-    <% } %>
-  </ul>
-  <% } else { %>
-  <h3>No Users to display...</h3>
+<% if(users.length > 0) { %>
+<ul>
+  <% for (const user of users) { %>
+  <li><%= user %></li>
   <% } %>
-</body>
+</ul>
+<% } else { %>
+<h3>No Users to display...</h3>
+<% } %>
 
-</html>
+<%- include('includes/end.ejs') %>
